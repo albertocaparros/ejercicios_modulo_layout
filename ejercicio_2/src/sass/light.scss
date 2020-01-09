@@ -1,0 +1,55 @@
+// Font Variables
+$roboto-slab: Arial, Helvetica, sans-serif;
+$open-sans: 'Courier New', Courier, monospace;
+
+.container {
+  max-width: 70%;
+  margin: auto;
+  margin-top: 3rem;
+}
+
+* {
+  font-family: $roboto-slab;
+  background-color: #ffebcd;
+  color: black;
+  font-size: 1.2rem;
+}
+
+.secondary-font {
+  font-family: $open-sans;
+}
+
+.fila {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 10px;
+}
+
+.square {
+  width: 150px;
+  height: 150;
+  line-height: 100px;
+  white-space: unset;
+  text-align: center;
+  margin: 5px;
+}
+
+.base {
+  background-color: #f4c08d;
+}
+
+.important {
+  background-color: #ba8b5a;
+}
+
+.warning {
+  background-color: #88d7af;
+}
+
+.shadow-box {
+  background-color: #ff8765;
+  -webkit-box-shadow: -30px -26px 27px -12px rgba(99, 69, 28, 0.74);
+  -moz-box-shadow: -30px -26px 27px -12px rgba(99, 69, 28, 0.74);
+  box-shadow: -30px -26px 27px -12px rgba(99, 69, 28, 0.74);
+}

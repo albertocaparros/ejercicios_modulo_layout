@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab&display=swap');
+
+// Font Variables
+$roboto-slab: 'Roboto Slab', serif;
+$open-sans: 'Open Sans', sans-serif;
+
+.container {
+  max-width: 70%;
+  margin: auto;
+  margin-top: 3rem;
+}
+
+* {
+  font-family: $roboto-slab;
+  background-color: #333;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.secondary-font {
+  font-family: $open-sans;
+  font-style: italic;
+  font-weight: 200;
+}
+
+.fila {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 10px;
+}
+
+.square {
+  width: 150px;
+  height: 150;
+  line-height: 100px;
+  white-space: unset;
+  text-align: center;
+  margin: 5px;
+}
+
+.base {
+  background-color: #4c83ca;
+}
+
+.important {
+  background-color: #6779c7;
+}
+
+.warning {
+  background-color: #b63f88;
+}
+
+.shadow-box {
+  background-color: #887456;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(130, 146, 224, 1);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(130, 146, 224, 1);
+  box-shadow: 10px 10px 5px 0px rgba(130, 146, 224, 1);
+}
