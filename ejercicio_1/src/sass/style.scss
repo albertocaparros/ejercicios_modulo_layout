@@ -1,0 +1,71 @@
+$color-red: #ff0000;
+$color-green: #00ff00;
+$color-blue: #0000ff;
+
+@function cambiar-color-letra($color) {
+  @if (lightness($color) > 50) {
+    @return #000000; // Lighter background, returns dark color
+  } @else {
+    @return #ffffff; // Darker background, returns light color
+  }
+}
+
+@mixin gradual($color) {
+  $darkpercentage: 10%;
+  @for $i from 4 through 1 {
+    div:nth-child(#{$i}) {
+      background-color: darken($color, $darkpercentage);
+      color: cambiar-color-letra(darken($color, ($i * 10%)));
+    }
+
+    $darkpercentage: ($darkpercentage + 10%);
+  }
+
+  div:nth-child(5) {
+    background-color: darken($color, 0);
+    color: cambiar-color-letra(darken($color, 0));
+  }
+
+  $lightpercentage: 10%;
+  @for $i from 6 through 9 {
+    div:nth-child(#{$i}) {
+      background-color: lighten($color, $lightpercentage);
+      color: cambiar-color-letra(lighten($color, $lightpercentage));
+    }
+
+    $lightpercentage: ($lightpercentage + 10%);
+  }
+}
+
+.container {
+  max-width: 70%;
+  margin: auto;
+  margin-top: 3rem;
+}
+
+.fila {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 10px;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  white-space: unset;
+  text-align: center;
+}
+
+.fila-red {
+  @include gradual($color-red);
+}
+
+.fila-green {
+  @include gradual($color-green);
+}
+
+.fila-blue {
+  @include gradual($color-blue);
+}
