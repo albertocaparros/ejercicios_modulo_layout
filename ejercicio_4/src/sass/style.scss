@@ -1,0 +1,102 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+html,
+body {
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+ul {
+  display: flex;
+  padding-left: 5px;
+  margin: 0;
+  text-align: center;
+}
+
+li {
+  text-transform: uppercase;
+  list-style-type: none;
+  font-weight: bold;
+  margin: 0;
+  padding: 5px 2px;
+}
+
+.uno {
+  background-color: #d9d900;
+  min-height: 5vh;
+}
+
+#inner-container {
+  min-height: 95vh;
+}
+.dos {
+  background-color: #006b5f;
+}
+
+.tres {
+  background-color: #c3fcf1;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box {
+  width: 100%;
+}
+@media screen and (min-width: 600px) {
+  ul {
+    justify-content: space-around;
+    line-height: 100px;
+  }
+  .uno {
+    min-height: 15vh;
+  }
+
+  #inner-container {
+    min-height: 85vh;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  ul {
+    flex-direction: column;
+    text-align: left;
+    height: 100%;
+    justify-content: space-around;
+  }
+
+  .container {
+    width: 90%;
+    margin: auto;
+    height: 100%;
+  }
+  .uno {
+    width: 38.2%;
+    height: 100vh;
+  }
+
+  #inner-container {
+    width: 61.8%;
+    height: 100vh;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 80%;
+  }
+
+  .uno {
+    width: 25%;
+    order: -1;
+  }
+  #inner-container {
+    width: 75%;
+  }
+}
