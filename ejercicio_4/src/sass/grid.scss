@@ -1,0 +1,120 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+html,
+body {
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+ul {
+  display: grid;
+  justify-content: start;
+  padding-left: 5px;
+  margin: 0;
+  text-align: center;
+}
+
+li {
+  display: inline-grid;
+  grid-row: 1;
+  justify-self: start;
+
+  text-transform: uppercase;
+  list-style-type: none;
+  font-weight: bold;
+  margin: 0;
+  padding: 5px 2px;
+}
+
+.uno {
+  background-color: #d9d900;
+  min-height: 3vh;
+}
+
+#inner-container {
+  min-height: 95vh;
+}
+.dos {
+  background-color: #006b5f;
+}
+
+.tres {
+  background-color: #c3fcf1;
+}
+
+.container {
+  width: 100%;
+  display: grid;
+}
+
+.box {
+  width: 100%;
+}
+@media screen and (min-width: 600px) {
+  ul {
+    justify-content: space-around;
+    line-height: 100px;
+  }
+
+  .uno {
+    min-height: 15vh;
+  }
+
+  #inner-container {
+    min-height: 85vh;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  ul {
+    text-align: left;
+    height: 100%;
+    justify-content: left;
+  }
+
+  li {
+    grid-row: auto;
+    align-items: center;
+  }
+
+  .container {
+    width: 90%;
+    margin: auto;
+    height: 100%;
+  }
+  .uno {
+    width: 100%;
+    height: 100vh;
+    justify-content: stretch;
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+
+  #inner-container {
+    width: 100%;
+    height: 100vh;
+    justify-content: stretch;
+    grid-column-start: 4;
+    grid-column-end: 10;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 80%;
+  }
+
+  .uno {
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 28;
+  }
+  #inner-container {
+    width: 100%;
+    grid-column-start: 28;
+    grid-column-end: 100;
+  }
+}
